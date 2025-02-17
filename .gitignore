@@ -1,3 +1,6 @@
+# Custom settings for latexmk
+build/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
