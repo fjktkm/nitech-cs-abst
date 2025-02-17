@@ -1,0 +1,15 @@
+{
+	"name": "fjktkm/nitech-cs-abst",
+	"image": "texlive/texlive:latest",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"James-Yu.latex-workshop"
+			]
+		}
+	}
+}

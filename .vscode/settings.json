@@ -1,0 +1,6 @@
+{
+    "latex-workshop.bibtex-fields.sort.enabled": true,
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)"
+}
