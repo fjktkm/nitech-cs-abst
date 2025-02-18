@@ -50,13 +50,13 @@
       
     \fi
     
-    \edef\verticaloffset{\dimexpr-1in-\topmargin-\headheight-\headsep\relax}
+    \edef\verticaloffset{\dimexpr1in+\topmargin+\headheight+\headsep\relax}
     
     \begin{tikzpicture}[remember picture,overlay]
       \draw[thick]
-      ([shift={(\horizontaloffset-\columnsep,\verticaloffset+\columnsep)}]current page.north west)
+      ([shift={(\horizontaloffset-\columnsep,\verticaloffset-\columnsep)}]current page.south west)
       rectangle
-      ([shift={(\horizontaloffset+\textwidth+\columnsep,\verticaloffset-\textheight-\columnsep)}]current page.north west);
+      ([shift={(\horizontaloffset+\textwidth+\columnsep,\verticaloffset+\textheight+\columnsep)}]current page.south west);
     \end{tikzpicture}
   }%
 }
