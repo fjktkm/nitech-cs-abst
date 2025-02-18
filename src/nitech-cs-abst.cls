@@ -53,10 +53,28 @@
     \edef\verticaloffset{\dimexpr1in+\topmargin+\headheight+\headsep\relax}
     
     \begin{tikzpicture}[remember picture,overlay]
-      \draw[thick]
+      \draw[thin]
       ([shift={(\horizontaloffset-\columnsep,\verticaloffset-\columnsep)}]current page.south west)
       rectangle
       ([shift={(\horizontaloffset+\textwidth+\columnsep,\verticaloffset+\textheight+\columnsep)}]current page.south west);
+      \draw[thin]
+      ([shift={(\horizontaloffset-\columnsep,\verticaloffset+\textheight+\columnsep-5mm)}]current page.south west)
+      -- ([shift={(\horizontaloffset+\textwidth+\columnsep,\verticaloffset+\textheight+\columnsep-5mm)}]current page.south west);
+      
+      \ifnum\value{page}=1
+      \draw[thin]
+      ([shift={(\horizontaloffset+\textwidth/2+\columnsep,\verticaloffset+\textheight+\columnsep-5mm)}]current page.south west)
+      -- ([shift={(\horizontaloffset+\textwidth/2+\columnsep,\verticaloffset+\textheight+\columnsep-15mm)}]current page.south west);
+      \draw[thin]
+      ([shift={(\horizontaloffset+3\textwidth/4+\columnsep,\verticaloffset+\textheight+\columnsep-5mm)}]current page.south west)
+      -- ([shift={(\horizontaloffset+3\textwidth/4+\columnsep,\verticaloffset+\textheight+\columnsep-10mm)}]current page.south west);
+      \draw[thin]
+      ([shift={(\horizontaloffset+\textwidth/2+\columnsep,\verticaloffset+\textheight+\columnsep-10mm)}]current page.south west)
+      -- ([shift={(\horizontaloffset+\textwidth+\columnsep,\verticaloffset+\textheight+\columnsep-10mm)}]current page.south west);
+      \draw[thin]
+      ([shift={(\horizontaloffset-\columnsep,\verticaloffset+\textheight+\columnsep-15mm)}]current page.south west)
+      -- ([shift={(\horizontaloffset+\textwidth+\columnsep,\verticaloffset+\textheight+\columnsep-15mm)}]current page.south west);
+      \fi
     \end{tikzpicture}
   }%
 }
